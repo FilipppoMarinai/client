@@ -28,7 +28,6 @@ public class App
             scanner.nextLine();
         
             out.writeBytes(String.valueOf(num) + "\n");
-            int tentativi = 1;
 
             int risposta = in.read();
 
@@ -44,10 +43,11 @@ public class App
                 num = scanner.nextInt();
                 scanner.nextLine();
                 out.writeBytes(String.valueOf(num) + "\n");
-                tentativi++;
 
                 risposta = in.read();
             }
+
+            int tentativi = in.read();
 
             System.out.print("Numero indovinato in " + tentativi + " tentativi\n");
             scanner.close();
